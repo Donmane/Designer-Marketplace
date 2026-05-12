@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "name": "Ayo Studio",
+    "role": "UI/UX Designer",
+    "skills": ["Figma", "Wireframing", "Prototyping"],
+    "rating": 4.8,
+    "location": "Lagos, Nigeria",
+    "isFeatured": true,
+    "bio": "Creates modern and user-friendly mobile and web interfaces.",
+    "price": 120
+  },
+  {
+    "id": 2,
+    "name": "Kemi Creative",
+    "role": "Brand Designer",
+    "skills": ["Branding", "Illustration", "Logo Design"],
+    "rating": 4.6,
+    "location": "Abuja, Nigeria",
+    "isFeatured": false,
+    "bio": "Helps businesses build strong visual identities and branding systems.",
+    "price": 90
+  },
+  {
+    "id": 3,
+    "name": "Zane Digital",
+    "role": "Frontend Designer",
+    "skills": ["Web Design", "UI Design", "Creative Direction"],
+    "rating": 4.9,
+    "location": "Remote",
+    "isFeatured": true,
+    "bio": "Designs clean digital experiences focused on usability and aesthetics.",
+    "price": 150
+  },
+  {
+    "id": 4,
+    "name": "Mira Studios",
+    "role": "Product Designer",
+    "skills": ["UX Research", "Design Systems", "Figma"],
+    "rating": 4.7,
+    "location": "Port Harcourt, Nigeria",
+    "isFeatured": false,
+    "bio": "Builds scalable product experiences for startups and businesses.",
+    "price": 110
+  },
+  {
+    "id": 5,
+    "name": "Pixel Forge",
+    "role": "Graphic Designer",
+    "skills": ["Photoshop", "Poster Design", "Brand Assets"],
+    "rating": 4.5,
+    "location": "Ibadan, Nigeria",
+    "isFeatured": true,
+    "bio": "Creates vibrant visual assets for brands and online campaigns.",
+    "price": 80
+  },
+  {
+    "id": 6,
+    "name": "Nova Creative",
+    "role": "Motion Designer",
+    "skills": ["After Effects", "Animation", "Video Editing"],
+    "rating": 4.9,
+    "location": "Remote",
+    "isFeatured": false,
+    "bio": "Produces cinematic animations and engaging visual motion content.",
+    "price": 170
+  },
+  {
+    "id": 7,
+    "name": "Lumen Arts",
+    "role": "Illustrator",
+    "skills": ["Digital Art", "Character Design", "Concept Art"],
+    "rating": 4.7,
+    "location": "Enugu, Nigeria",
+    "isFeatured": true,
+    "bio": "Specializes in expressive illustrations and concept-driven artwork.",
+    "price": 95
+  },
+  {
+    "id": 8,
+    "name": "CraftGrid",
+    "role": "Web Designer",
+    "skills": ["Responsive Design", "Landing Pages", "UI Systems"],
+    "rating": 4.6,
+    "location": "Kaduna, Nigeria",
+    "isFeatured": false,
+    "bio": "Builds modern responsive website layouts for startups and creators.",
+    "price": 130
+  },
+  {
+    "id": 9,
+    "name": "VisionSync",
+    "role": "Creative Director",
+    "skills": ["Creative Strategy", "Brand Identity", "Leadership"],
+    "rating": 5.0,
+    "location": "Lagos, Nigeria",
+    "isFeatured": true,
+    "bio": "Leads creative direction for premium digital and branding projects.",
+    "price": 200
+  },
+  {
+    "id": 10,
+    "name": "Echo Designs",
+    "role": "UX Designer",
+    "skills": ["User Research", "Accessibility", "Interaction Design"],
+    "rating": 4.8,
+    "location": "Remote",
+    "isFeatured": false,
+    "bio": "Focuses on intuitive and accessible user experiences for web products.",
+    "price": 140
+  }
+]
