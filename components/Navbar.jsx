@@ -1,24 +1,35 @@
+import { Link } from "react-router-dom";
 function Navbar() {
-    return(
+  return (
     <>
-    <nav>
-        <div>
-            <h1>Designora</h1>
+      <header className="bg-blough text-white p-4 flex items-center justify-between">
+        <h1 className="text-3xl">Designora</h1>
+
+        <ul className="flex items-center gap-20 text-md font-medium">
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="./featured-designers">Designers</Link>
+          </li>
+          <li>
+            <Link to="/services">Services</Link>
+          </li>
+          <li>
+            <Link to="/about">About</Link>
+          </li>
+        </ul>
+
+        <div className="flex gap-4 items-center">
+          <button className="bg-black p-4 rounded-xl text-white font-medium">
+            Continue as Client
+          </button>
+          <button className="bg-white p-4 rounded-xl text-black font-medium">
+            Continue as Designer
+          </button>
         </div>
-        <div>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Designers</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">About</a></li>
-            </ul>
-        </div>
-        <div>
-            <button>Continue as Client</button>
-            <button>Continue as Designer</button>
-        </div>
-    </nav>
+      </header>
     </>
-    )
+  );
 }
-export default Navbar
+export default Navbar;

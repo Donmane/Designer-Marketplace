@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "David Johnson",
+    "role": "Startup Founder",
+    "message": "Designora helped us find an amazing UI designer for our mobile app project.",
+    "rating": 5
+  },
+  {
+    "id": 2,
+    "name": "Sarah Williams",
+    "role": "Content Creator",
+    "message": "The hiring process was smooth and the designers were incredibly talented.",
+    "rating": 4
+  },
+  {
+    "id": 3,
+    "name": "Michael Lee",
+    "role": "Product Manager",
+    "message": "We connected with a designer within hours and completed our project ahead of schedule.",
+    "rating": 5
+  }
+]
