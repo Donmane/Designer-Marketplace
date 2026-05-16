@@ -20,15 +20,11 @@ function Navbar({ user, setUser }) {
     { name: "About", path: "/about" },
   ];
 
-  // ✅ SINGLE SOURCE OF TRUTH
-
   return (
     <>
-      {/* desktop navbar */}
-      <header className="hidden bg-blough text-white p-4 md:flex items-center justify-between">
+      <header className=" bg-blough text-white p-4 flex items-center justify-between">
         <h1 className="text-3xl">Designora</h1>
 
-        {/* nav links */}
         <ul className="flex items-center gap-20 text-md font-medium cursor-pointer">
           {navLinks.map((link, index) => (
             <li key={index}>
@@ -37,7 +33,7 @@ function Navbar({ user, setUser }) {
           ))}
         </ul>
 
-        {/* AUTH / USER UI */}
+        
         {user ? (
           <>
             <span>Welcome {user.name}</span>
