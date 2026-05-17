@@ -3,11 +3,11 @@
 import { Link } from "react-router-dom";
 
 function Navbar({ user, setUser }) {
-
   function handleLogout() {
     localStorage.removeItem("user");
     setUser(null);
     localStorage.removeItem("role");
+    localStorage.removeItem("hired");
   }
   // const toggleMenuFunction = () => {
   //   setIsMenuOpen(!isMenuOpen);
@@ -15,9 +15,12 @@ function Navbar({ user, setUser }) {
 
   const navLinks = [
     { name: "Home", path: "/" },
-    { name: "Designers", path: "/featured-designers" },
+    { name: "Designers", path: "/designers" },
     { name: "Services", path: "/services" },
     { name: "About", path: "/about" },
+  ...(user?.role === "client"
+    ? [{ name: "View Hires", path: "/viewhire" }]
+    : []),
   ];
 
   return (
@@ -33,17 +36,19 @@ function Navbar({ user, setUser }) {
           ))}
         </ul>
 
-        
         {user ? (
           <>
             <span>Welcome {user.name}</span>
-            <button onClick={handleLogout} className="bg-red-500 p-2 rounded-xl text-white font-medium hover:bg-red-600">
+            <button
+              onClick={handleLogout}
+              className="bg-red-500 p-2 rounded-xl text-white font-medium hover:bg-red-600"
+            >
               Logout
             </button>
           </>
         ) : (
           <div className="flex gap-4 items-center">
-            <Link to="/continueclient">
+            <Link to="/continuecilent">
               <button className="bg-black p-4 rounded-xl text-white font-medium hover:bg-gray-600">
                 Continue as Client
               </button>
