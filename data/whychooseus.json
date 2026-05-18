@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "title": "Verified Designers",
+    "description": "Every designer is reviewed and approved before joining the platform."
+  },
+  {
+    "id": 2,
+    "title": "Fast Hiring",
+    "description": "Hire skilled professionals in minutes, not days."
+  },
+  {
+    "id": 3,
+    "title": "Secure Process",
+    "description": "Your data and transactions are protected and safe."
+  },
+  {
+    "id": 4,
+    "title": "Flexible Pricing",
+    "description": "Choose talent that fits your budget and project size."
+  }
+]

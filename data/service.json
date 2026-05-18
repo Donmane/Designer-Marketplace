@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "title": "UI/UX Design",
+    "description": "Modern and user-friendly interfaces for web and mobile apps.",
+    "category": "Design",
+    "price": 120,
+    "featured": true
+  },
+  {
+    "id": 2,
+    "title": "Frontend Development",
+    "description": "Responsive React websites with clean user experiences.",
+    "category": "Development",
+    "price": 150,
+    "featured": true
+  },
+  {
+    "id": 3,
+    "title": "Logo Design",
+    "description": "Creative logos and visual branding for businesses.",
+    "category": "Branding",
+    "price": 80,
+    "featured": false
+  },
+  {
+    "id": 4,
+    "title": "Mobile App Design",
+    "description": "High-fidelity app screens and interactive prototypes.",
+    "category": "Design",
+    "price": 140,
+    "featured": true
+  },
+  {
+    "id": 5,
+    "title": "Social Media Design",
+    "description": "Engaging social media posts, banners, and ad creatives.",
+    "category": "Marketing",
+    "price": 60,
+    "featured": false
+  }
+]

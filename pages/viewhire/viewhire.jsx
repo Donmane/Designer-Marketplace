@@ -7,7 +7,6 @@ const Viewhire = () => {
     hired = [];
   }
 
-  // 🔥 REMOVE NULLS
   hired = hired.filter(Boolean);
 
   return (

@@ -8,19 +8,21 @@ const handleSubmit = () => {
   const user = {
     name,
     email,
-    role: "client", // or "designer"
+    role: "client"
   };
 
   localStorage.setItem("user", JSON.stringify(user));
-  setUser(user); // 🔥 IMPORTANT FIX
+  setUser(user); 
 
   navigate("/");
 };
+
+
   return (
     <>
       <div>
         <form onSubmit={handleSubmit}>
-          <h1>Continue as Designer</h1>
+          <h1>Continue as Client</h1>
           <input
             type="text"
             placeholder="Name"
@@ -34,8 +36,7 @@ const handleSubmit = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-
-          <button>Submit</button>
+          <button type="submit" disabled={!name || !email}>Submit</button>
         </form>
       </div>
     </>

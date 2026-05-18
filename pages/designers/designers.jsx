@@ -7,7 +7,6 @@ const handleHire = (designer) => {
 
   const existing = JSON.parse(localStorage.getItem("hired")) || [];
 
-  // 🔥 check if already hired
   const alreadyHired = existing.some((d) => d.id === designer.id);
 
   if (alreadyHired) return;
@@ -19,7 +18,6 @@ const handleHire = (designer) => {
   return (
     <section>
       <h1>Featured developers</h1>
-
       {designers.map((d) => (
         <div key={d.id}>
           <h1>{d.name}</h1>

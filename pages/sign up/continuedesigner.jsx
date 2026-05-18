@@ -38,7 +38,7 @@ function Continuedesigner({ setUser }) {
             onChange={(e) => setEmail(e.target.value)}
           />
 
-          <button>Submit</button>
+          <button disabled={!name || !email}>Submit</button>
         </form>
       </div>
     </>

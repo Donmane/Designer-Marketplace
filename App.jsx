@@ -7,7 +7,8 @@ import Continuedesigner from "./pages/sign up/continuedesigner";
 import Continueclient from "./pages/sign up/continuecilent";
 import Designers from "./pages/designers/designers";
 import Viewhire from "./pages/viewhire/viewhire";
-
+import Services from "./pages/servcies/services"
+import About from "./pages/about/about";
 function App() {
   const [user, setUser] = useState(() => {
     const stored = localStorage.getItem("user");
@@ -22,6 +23,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/designers" element={<Designers />} />
         <Route path="/viewhire" element={<Viewhire />} />
+        <Route path="/services" element={<Services/>}/>
+        <Route path="/about" element={<About/>}/>
 
         <Route
           path="/continuedesigner"
