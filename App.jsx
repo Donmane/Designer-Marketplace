@@ -9,6 +9,7 @@ import Designers from "./pages/designers/designers";
 import Viewhire from "./pages/viewhire/viewhire";
 import Services from "./pages/servcies/services"
 import About from "./pages/about/about";
+import Upload_Services from "./pages/upload services/Upload_Services";
 function App() {
   const [user, setUser] = useState(() => {
     const stored = localStorage.getItem("user");
@@ -25,6 +26,7 @@ function App() {
         <Route path="/viewhire" element={<Viewhire />} />
         <Route path="/services" element={<Services/>}/>
         <Route path="/about" element={<About/>}/>
+        <Route path ="/uploadservices" element={<Upload_Services/>}/>
 
         <Route
           path="/continuedesigner"

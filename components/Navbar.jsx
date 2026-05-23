@@ -21,6 +21,10 @@ function Navbar({ user, setUser }) {
   ...(user?.role === "client"
     ? [{ name: "View Hires", path: "/viewhire" }]
     : []),
+  ...(user?.role === "designer"
+    ? [{ name: "Upload Services", path: "/uploadservices" }]
+    : []),
+
   ];
 
   return (
@@ -71,7 +75,7 @@ function Navbar({ user, setUser }) {
           size={30}
         />
       </div> */}
-
+{console.log(JSON.parse(localStorage.getItem("user")))}
       {/* mobile nav */}
       {/* {isMenuOpen && (
         <nav className="md:hidden flex flex-col gap-4 p-4 bg-black">
