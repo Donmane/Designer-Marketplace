@@ -29,7 +29,7 @@ function Navbar({ user, setUser }) {
 
   return (
     <>
-      <header className=" bg-blough text-white p-4 flex items-center justify-between">
+      <header className=" p-4 flex items-center justify-between">
         <h1 className="text-3xl">Designora</h1>
 
         <ul className="flex items-center gap-20 text-md font-medium cursor-pointer">
