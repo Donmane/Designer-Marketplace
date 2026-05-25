@@ -10,6 +10,8 @@ import Viewhire from "./pages/viewhire/viewhire";
 import Services from "./pages/servcies/services"
 import About from "./pages/about/about";
 import Upload_Services from "./pages/upload services/Upload_Services";
+import { ToastProvider } from "./components/Toast";
+
 function App() {
   const [user, setUser] = useState(() => {
     const stored = localStorage.getItem("user");
@@ -17,31 +19,33 @@ function App() {
   });
 
   return (
-    <BrowserRouter>
-      <Navbar user={user} setUser={setUser} />
+    <ToastProvider>
+      <BrowserRouter>
+        <Navbar user={user} setUser={setUser} />
 
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/designers" element={<Designers />} />
-        <Route path="/viewhire" element={<Viewhire />} />
-        <Route path="/services" element={<Services/>}/>
-        <Route path="/about" element={<About/>}/>
-        <Route path ="/uploadservices" element={<Upload_Services/>}/>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/designers" element={<Designers />} />
+          <Route path="/viewhire" element={<Viewhire />} />
+          <Route path="/services" element={<Services/>}/>
+          <Route path="/about" element={<About/>}/>
+          <Route path ="/uploadservices" element={<Upload_Services/>}/>
 
-        <Route
-          path="/continuedesigner"
-          element={<Continuedesigner setUser={setUser} />}
-        />
-        <Route
-          path="/continuecilent"
-          element={<Continueclient setUser={setUser} />}
-        />
-      </Routes>
+          <Route
+            path="/continuedesigner"
+            element={<Continuedesigner setUser={setUser} />}
+          />
+          <Route
+            path="/continuecilent"
+            element={<Continueclient setUser={setUser} />}
+          />
+        </Routes>
 
-      <Footer />
-      
-    </BrowserRouter>
+        <Footer />
+      </BrowserRouter>
+    </ToastProvider>
   );
 }
 
 export default App;
+
