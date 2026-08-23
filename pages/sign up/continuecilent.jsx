@@ -24,25 +24,20 @@ function Continueclient({ setUser }) {
   };
 
   return (
-    <div className="min-h-[80vh] flex items-center justify-center px-4 sm:px-6 lg:px-8 py-12 bg-gradient-to-br from-slate-50 via-slate-100 to-indigo-50/30">
-      <div className="max-w-md w-full bg-white/80 backdrop-blur-md p-8 sm:p-10 rounded-3xl border border-white shadow-xl hover:shadow-2xl transition-all duration-300">
-        <div className="text-center mb-8">
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-violet-600 text-white shadow-lg shadow-violet-100 mb-4 animate-bounce-slow">
-            <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-            </svg>
-          </div>
-          <h2 className="text-3xl font-bold tracking-tight text-slate-900">
+    <div className="min-h-[80vh] flex items-center justify-center px-4 sm:px-6 lg:px-8 py-12 bg-transparent">
+      <div className="max-w-md w-full bg-[#111111] p-6 rounded-lg border border-[#222222] transition-colors duration-300">
+        <div className="text-center mb-6">
+          <h2 className="text-2xl font-bold tracking-tight text-white">
             Join as a Client
           </h2>
-          <p className="mt-2 text-sm text-slate-500 font-medium">
+          <p className="mt-1.5 text-xs text-[#888888]">
             Find the world's best design talent for your projects
           </p>
         </div>
 
-        <form onSubmit={handleSubmit} className="space-y-6">
+        <form onSubmit={handleSubmit} className="space-y-4">
           <div className="space-y-1">
-            <label className="text-xs font-bold text-slate-500 uppercase tracking-wider block">
+            <label className="text-[10px] font-bold text-[#888888] uppercase tracking-tight block">
               Full Name
             </label>
             <input
@@ -50,13 +45,13 @@ function Continueclient({ setUser }) {
               placeholder="e.g. Jane Doe"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-violet-600 focus:border-transparent transition-all duration-200 bg-slate-50/50 hover:bg-slate-50 text-slate-900 placeholder-slate-400 font-medium"
+              className="w-full px-3.5 py-2.5 rounded-md border border-[#222222] focus:outline-none focus:border-[#FF6B35] focus:ring-1 focus:ring-[#FF6B35] transition-all duration-200 bg-[#0a0a0a] text-white placeholder-[#888888] text-xs font-semibold tracking-tight"
               required
             />
           </div>
 
           <div className="space-y-1">
-            <label className="text-xs font-bold text-slate-500 uppercase tracking-wider block">
+            <label className="text-[10px] font-bold text-[#888888] uppercase tracking-tight block">
               Email Address
             </label>
             <input
@@ -64,7 +59,7 @@ function Continueclient({ setUser }) {
               placeholder="e.g. jane@example.com"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-violet-600 focus:border-transparent transition-all duration-200 bg-slate-50/50 hover:bg-slate-50 text-slate-900 placeholder-slate-400 font-medium"
+              className="w-full px-3.5 py-2.5 rounded-md border border-[#222222] focus:outline-none focus:border-[#FF6B35] focus:ring-1 focus:ring-[#FF6B35] transition-all duration-200 bg-[#0a0a0a] text-white placeholder-[#888888] text-xs font-semibold tracking-tight"
               required
             />
           </div>
@@ -72,7 +67,7 @@ function Continueclient({ setUser }) {
           <button
             type="submit"
             disabled={!name || !email}
-            className="w-full py-4 px-6 bg-violet-600 hover:bg-violet-700 disabled:bg-slate-200 disabled:text-slate-400 disabled:cursor-not-allowed text-white font-semibold rounded-xl shadow-lg shadow-violet-100 hover:shadow-xl active:scale-[0.98] transition-all duration-200 cursor-pointer block text-center"
+            className="w-full py-2.5 px-4 bg-[#FF6B35] hover:bg-[#e0531f] disabled:bg-[#222222] disabled:text-[#888888] disabled:cursor-not-allowed text-white font-bold tracking-tight rounded-md transition-colors cursor-pointer block text-center text-xs"
           >
             Create Client Profile
           </button>

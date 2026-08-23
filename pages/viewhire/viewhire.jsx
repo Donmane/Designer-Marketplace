@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Star, MapPin, Briefcase, Sparkles, FolderOpen, Mail, ArrowRight } from "lucide-react";
+import { Star } from "lucide-react";
 
 const Viewhire = () => {
   let hired = [];
@@ -13,19 +13,15 @@ const Viewhire = () => {
   hired = hired.filter(Boolean);
 
   return (
-    <div className="min-h-[85vh] bg-gradient-to-b from-indigo-50/20 via-white to-slate-50 py-16 sm:py-24 transition-all duration-300">
+    <div className="min-h-[85vh] bg-transparent py-12 sm:py-16 transition-all duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Page Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-50 text-indigo-700 font-bold text-[10px] tracking-widest uppercase">
-            <Sparkles className="w-3.5 h-3.5" />
-            Workspace Contracts
-          </div>
-          <h1 className="text-4xl font-extrabold tracking-tight text-slate-900 leading-tight">
+        <div className="text-center max-w-3xl mx-auto mb-12 space-y-3">
+          <h1 className="text-3xl font-bold tracking-tight text-white leading-tight">
             My Active Hires
           </h1>
-          <p className="text-slate-500 font-medium text-sm sm:text-base leading-relaxed">
+          <p className="text-xs sm:text-sm text-[#888888] font-normal leading-relaxed">
             Manage your visual design resources, review freelance contract starting budgets, and send project messages to your contracted talent.
           </p>
         </div>
@@ -34,20 +30,16 @@ const Viewhire = () => {
         {hired.length === 0 ? (
           
           /* Premium Empty State */
-          <div className="max-w-md mx-auto bg-white/80 backdrop-blur-md p-10 sm:p-12 rounded-3xl border border-slate-100 shadow-xl hover:shadow-2xl transition-all duration-300 text-center space-y-6">
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-indigo-50 text-indigo-650 shadow-inner mb-2 animate-pulse-slow">
-              <FolderOpen className="w-8 h-8" />
-            </div>
-            <div className="space-y-2">
-              <h3 className="text-xl font-bold text-slate-900">No hires yet</h3>
-              <p className="text-slate-500 text-sm font-medium leading-relaxed">
+          <div className="max-w-md mx-auto bg-[#111111] p-6 rounded-lg border border-[#222222] transition-colors duration-300 text-center space-y-4">
+            <div className="space-y-1.5">
+              <h3 className="text-base font-bold text-white tracking-tight">No hires yet</h3>
+              <p className="text-[#888888] text-xs leading-relaxed">
                 You haven't contracted any visual designers yet. Head over to our directory to find the perfect creative freelancer for your brand.
               </p>
             </div>
-            <Link to="/designers" className="block pt-2">
-              <button className="w-full py-3.5 px-5 bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-sm rounded-xl shadow-md shadow-indigo-100 hover:shadow-xl active:scale-[0.98] transition-all cursor-pointer flex items-center justify-center gap-2 group">
+            <Link to="/designers" className="block pt-1">
+              <button className="w-full py-2.5 px-4 bg-[#FF6B35] hover:bg-[#e0531f] text-white font-bold tracking-tight text-xs rounded-md transition-colors cursor-pointer flex items-center justify-center">
                 Browse Talent Directory
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
               </button>
             </Link>
           </div>
@@ -55,66 +47,64 @@ const Viewhire = () => {
         ) : (
           
           /* Hired Cards Grid */
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {hired.map((d, index) => (
               <div
                 key={index}
-                className="bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col justify-between h-full group"
+                className="bg-[#111111] rounded-lg border border-[#222222] transition-colors duration-300 overflow-hidden flex flex-col justify-between h-full group"
               >
                 
                 {/* Active Contract Header */}
-                <div className="px-6 py-4 sm:px-8 bg-slate-50 border-b border-slate-100 flex items-center justify-between">
-                  <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-100 text-[10px] font-bold uppercase tracking-wider">
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping"></span>
+                <div className="px-4 py-2.5 bg-[#111111] border-b border-[#222222] flex items-center justify-between">
+                  <span className="text-[9px] font-bold uppercase tracking-tight text-emerald-400">
                     Active Contract
                   </span>
-                  <span className="text-[10px] font-bold text-slate-400">ID: #{1000 + d.id}</span>
+                  <span className="text-[9px] text-[#888888] font-semibold">ID: #{1000 + d.id}</span>
                 </div>
 
                 {/* Card Main Body */}
-                <div className="p-6 sm:p-8 space-y-5 flex-grow">
+                <div className="p-6 space-y-4 flex-grow">
                   
                   {/* Title & Role */}
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-xl bg-gradient-to-tr from-indigo-500 to-violet-500 text-white flex items-center justify-center font-extrabold text-base uppercase shrink-0">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-md bg-[#222222] text-white flex items-center justify-center font-bold text-base uppercase shrink-0">
                       {d.name.charAt(0)}
                     </div>
                     <div>
-                      <h3 className="font-bold text-slate-900 text-base leading-snug group-hover:text-indigo-600 transition-colors">
+                      <h3 className="font-bold text-white text-base leading-snug tracking-tight">
                         {d.name}
                       </h3>
-                      <p className="text-xs font-bold text-indigo-650 capitalize mt-0.5">
+                      <p className="text-xs text-[#888888] capitalize mt-0.5 font-semibold">
                         {d.role}
                       </p>
                     </div>
                   </div>
 
                   {/* Rating display */}
-                  <div className="flex items-center gap-1 text-xs font-bold text-slate-700">
-                    <Star className="w-4 h-4 fill-amber-400 stroke-amber-400" />
-                    <span>{d.rating || "5.0"}</span>
-                    <span className="text-slate-350">/ 5.0 Rating</span>
+                  <div className="flex items-center gap-1 text-xs font-semibold text-[#888888] tracking-tight">
+                    <Star className="w-3.5 h-3.5 fill-[#888888] stroke-[#888888]" />
+                    <span className="text-white font-bold">{d.rating || "5.0"}</span>
+                    <span>/ 5.0 Rating</span>
                   </div>
 
                 </div>
 
                 {/* Footer and message action */}
-                <div className="px-6 py-5 sm:px-8 bg-slate-50 border-t border-slate-100 flex items-center justify-between gap-4">
+                <div className="px-6 py-4 bg-[#111111] border-t border-[#222222] flex items-center justify-between gap-4">
                   <div>
-                    <span className="text-[9px] font-bold text-slate-400 uppercase tracking-widest block">
+                    <span className="text-[9px] font-bold text-[#888888] uppercase tracking-tight block">
                       Contract Rate
                     </span>
-                    <span className="text-base font-black text-slate-900">
+                    <span className="text-sm font-bold text-white tracking-tight">
                       ${d.price}
-                      <span className="text-xs font-bold text-slate-400">/hr</span>
+                      <span className="text-xs text-[#888888] font-normal">/hr</span>
                     </span>
                   </div>
 
                   <a
                     href={`mailto:${d.email || "support@designora.com"}?subject=Project Collaboration - Designora`}
-                    className="flex items-center gap-1.5 px-4 py-2 bg-white hover:bg-indigo-600 hover:text-white border border-slate-200 rounded-xl text-xs font-bold text-slate-700 transition-all duration-200 cursor-pointer shadow-sm"
+                    className="px-3 py-1.5 bg-transparent hover:bg-[#222222] text-white border border-[#222222] rounded text-xs font-bold tracking-tight transition-colors cursor-pointer"
                   >
-                    <Mail className="w-3.5 h-3.5" />
                     Message
                   </a>
                 </div>
@@ -128,6 +118,6 @@ const Viewhire = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Viewhire;

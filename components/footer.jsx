@@ -1,4 +1,4 @@
-import { Sparkles, Mail } from "lucide-react";
+import { Mail } from "lucide-react";
 
 // Inline brand SVGs to replace missing brand icons in newer lucide-react versions
 const TwitterIcon = (props) => (
@@ -24,83 +24,81 @@ const GithubIcon = (props) => (
 
 function Footer() {
   return (
-    <footer className="bg-slate-950 text-slate-400 border-t border-slate-900/60 pt-16 pb-8 transition-all duration-300">
+    <footer className="bg-transparent text-[#888888] border-t border-[#222222] pt-12 pb-6 transition-all duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Footer Top Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-8 pb-12 border-b border-slate-900">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 pb-8 border-b border-[#222222]">
           
           {/* Logo & Description */}
-          <div className="md:col-span-2 space-y-4">
+          <div className="md:col-span-2 space-y-3">
             <div className="flex items-center gap-2">
-              <div className="bg-indigo-600 text-white p-1.5 rounded-lg">
-                <Sparkles className="w-4 h-4" />
-              </div>
-              <span className="text-xl font-extrabold text-white tracking-tight">
+              <span className="text-lg font-bold text-white tracking-tight flex items-center gap-2 select-none">
+                <span className="w-2.5 h-2.5 bg-white rounded-sm shrink-0"></span>
                 Designora
               </span>
             </div>
-            <h1 className="text-lg font-semibold text-slate-200 leading-snug max-w-sm">
+            <h1 className="text-sm font-medium text-white leading-normal max-w-sm">
               Connecting clients with creative designers worldwide.
             </h1>
-            <p className="text-sm text-slate-400 max-w-sm">
+            <p className="text-xs text-[#888888] max-w-sm leading-relaxed">
               Discover top freelance talent, manage contracts, build your reputation, and scale your creative vision on a single aesthetic platform.
             </p>
           </div>
 
           {/* Directory Links */}
           <div>
-            <h4 className="text-xs font-bold uppercase text-white tracking-widest mb-4">
+            <h4 className="text-xs font-semibold uppercase text-white tracking-wider mb-3">
               Marketplace
             </h4>
-            <ul className="space-y-2 text-sm font-medium">
+            <ul className="space-y-2 text-xs font-medium">
               <li>
-                <a href="/" className="hover:text-indigo-400 transition-colors">Find Talents</a>
+                <a href="/" className="hover:text-white transition-colors">Find Talents</a>
               </li>
               <li>
-                <a href="/services" className="hover:text-indigo-400 transition-colors">Browse Services</a>
+                <a href="/services" className="hover:text-white transition-colors">Browse Services</a>
               </li>
               <li>
-                <a href="/about" className="hover:text-indigo-400 transition-colors">How It Works</a>
+                <a href="/about" className="hover:text-white transition-colors">How It Works</a>
               </li>
             </ul>
           </div>
 
           {/* Social / Contact */}
-          <div className="space-y-4">
-            <h4 className="text-xs font-bold uppercase text-white tracking-widest">
+          <div className="space-y-3">
+            <h4 className="text-xs font-semibold uppercase text-white tracking-wider">
               Join Our Community
             </h4>
-            <div className="flex items-center gap-3">
-              <a href="#" className="p-2 rounded-xl bg-slate-900 hover:bg-indigo-600 hover:text-white transition-all duration-200" title="Twitter">
-                <TwitterIcon className="w-4 h-4" />
+            <div className="flex items-center gap-2">
+              <a href="#" className="p-2 rounded-md bg-[#111111] border border-[#222222] hover:border-white text-[#888888] hover:text-white transition-colors duration-200" title="Twitter">
+                <TwitterIcon className="w-3.5 h-3.5" />
               </a>
-              <a href="#" className="p-2 rounded-xl bg-slate-900 hover:bg-indigo-600 hover:text-white transition-all duration-200" title="LinkedIn">
-                <LinkedinIcon className="w-4 h-4" />
+              <a href="#" className="p-2 rounded-md bg-[#111111] border border-[#222222] hover:border-white text-[#888888] hover:text-white transition-colors duration-200" title="LinkedIn">
+                <LinkedinIcon className="w-3.5 h-3.5" />
               </a>
-              <a href="#" className="p-2 rounded-xl bg-slate-900 hover:bg-indigo-600 hover:text-white transition-all duration-200" title="GitHub">
-                <GithubIcon className="w-4 h-4" />
+              <a href="#" className="p-2 rounded-md bg-[#111111] border border-[#222222] hover:border-white text-[#888888] hover:text-white transition-colors duration-200" title="GitHub">
+                <GithubIcon className="w-3.5 h-3.5" />
               </a>
-              <a href="#" className="p-2 rounded-xl bg-slate-900 hover:bg-indigo-600 hover:text-white transition-all duration-200" title="Email">
-                <Mail className="w-4 h-4" />
+              <a href="#" className="p-2 rounded-md bg-[#111111] border border-[#222222] hover:border-white text-[#888888] hover:text-white transition-colors duration-200" title="Email">
+                <Mail className="w-3.5 h-3.5" />
               </a>
             </div>
-            <p className="text-xs text-slate-500 font-medium">
-              Need assistance? contact@designora.com
+            <p className="text-[11px] text-[#888888] font-medium">
+              assistance: contact@designora.com
             </p>
           </div>
 
         </div>
 
         {/* Footer Bottom Rights */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-slate-500 font-medium">
+        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-[11px] text-[#888888] font-medium">
             &copy; 2026 Designer Marketplace. All rights reserved.
           </p>
-          <div className="flex items-center gap-6 text-xs text-slate-500 font-medium">
-            <a href="#" className="hover:text-slate-300 transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-slate-300 transition-colors">Terms of Service</a>
-            <a href="#" className="hover:text-slate-300 transition-colors">Cookies Settings</a>
+          <div className="flex items-center gap-6 text-[11px] text-[#888888] font-medium">
+            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
+            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+            <a href="#" className="hover:text-white transition-colors">Cookies Settings</a>
           </div>
         </div>
 
