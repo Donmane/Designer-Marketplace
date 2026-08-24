@@ -1,7 +1,6 @@
 # 🎨 Designora — Premium Freelance Designer Marketplace
 
 > Connect with vetted creative designers, upload freelance services, manage active workspace contracts, and review digital portfolios on a single, glassmorphic marketplace.
-
 ---
 
 ## ✨ Features Overview
