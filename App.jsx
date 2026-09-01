@@ -10,6 +10,7 @@ import Viewhire from "./pages/viewhire/viewhire";
 import Services from "./pages/servcies/services"
 import About from "./pages/about/about";
 import Upload_Services from "./pages/upload services/Upload_Services";
+import NotFound from "./pages/notfound/NotFound";
 import { ToastProvider } from "./components/Toast";
 
 function App() {
@@ -39,6 +40,9 @@ function App() {
             path="/continuecilent"
             element={<Continueclient setUser={setUser} />}
           />
+
+          {/* Catch-all route for 404 Not Found */}
+          <Route path="*" element={<NotFound />} />
         </Routes>
 
         <Footer />
